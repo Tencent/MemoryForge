@@ -1,0 +1,147 @@
+{
+  "growing_up_location": {
+    "country": {
+      "type": "string",
+      "description": "Country where the agent primarily grew up (free text, e.g. China, United Kingdom, New Zealand)"
+    },
+    "city": {
+      "type": "string",
+      "description": "City where the agent primarily grew up"
+    }
+  },
+  "current_living_location": {
+    "country": {
+      "type": "string",
+      "description": "Current country of residence (free text, e.g. China, United Kingdom, New Zealand)"
+    },
+    "city": {
+      "type": "string",
+      "description": "Current city of residence"
+    }
+  },
+  "language_options": {
+    "allowed_values": {
+      "zh": {
+        "label_zh": "中文",
+        "label_en": "Chinese"
+      },
+      "en": {
+        "label_zh": "英文",
+        "label_en": "English"
+      }
+    },
+    "default": [
+      "zh"
+    ]
+  },
+  "target_education_level": {
+    "allowed_values": {
+      "0": {
+        "label_zh": "学前教育",
+        "label_en": "Early childhood education"
+      },
+      "1": {
+        "label_zh": "小学教育",
+        "label_en": "Primary education"
+      },
+      "2": {
+        "label_zh": "初中教育",
+        "label_en": "Lower secondary education"
+      },
+      "3": {
+        "label_zh": "高中教育",
+        "label_en": "Upper secondary education"
+      },
+      "4": {
+        "label_zh": "中学后非高等教育",
+        "label_en": "Post-secondary non-tertiary"
+      },
+      "5": {
+        "label_zh": "短周期高等教育",
+        "label_en": "Short-cycle tertiary"
+      },
+      "6": {
+        "label_zh": "本科或同等",
+        "label_en": "Bachelor's or equivalent"
+      },
+      "7": {
+        "label_zh": "硕士或同等",
+        "label_en": "Master's or equivalent"
+      },
+      "8": {
+        "label_zh": "博士或同等",
+        "label_en": "Doctoral or equivalent"
+      }
+    },
+    "standard": "ISCED_2011"
+  },
+  "target_occupation_group": {
+    "allowed_values": {
+      "student": {
+        "label_zh": "学生",
+        "label_en": "Student"
+      },
+      "manager_executive": {
+        "label_zh": "管理者 / 高管",
+        "label_en": "Manager / Executive"
+      },
+      "professional_finance_law_consulting": {
+        "label_zh": "专业服务（金融/法律/咨询）",
+        "label_en": "Professional Services"
+      },
+      "professional_tech_research": {
+        "label_zh": "技术 / 研发",
+        "label_en": "Technology / Research"
+      },
+      "professional_health_education": {
+        "label_zh": "医疗 / 教育",
+        "label_en": "Healthcare / Education"
+      },
+      "office_admin_support": {
+        "label_zh": "办公室 / 行政支持",
+        "label_en": "Office / Administrative Support"
+      },
+      "sales_customer_service": {
+        "label_zh": "销售 / 客服",
+        "label_en": "Sales / Customer Service"
+      },
+      "service_hospitality_retail": {
+        "label_zh": "服务业 / 餐饮 / 零售",
+        "label_en": "Service / Retail / Hospitality"
+      },
+      "skilled_trades_technical_ops": {
+        "label_zh": "技工 / 技术操作",
+        "label_en": "Skilled Trades / Technical Ops"
+      },
+      "manual_logistics_transport": {
+        "label_zh": "物流 / 运输 / 体力劳动",
+        "label_en": "Logistics / Transport / Manual Work"
+      },
+      "public_service_military": {
+        "label_zh": "公共部门 / 军警",
+        "label_en": "Public Service / Military"
+      },
+      "self_employed_creator": {
+        "label_zh": "自由职业 / 创作者 / 创业者",
+        "label_en": "Self-employed / Creator / Entrepreneur"
+      }
+    }
+  },
+  "institution_naming_policy": {
+    "allowed_values": {
+      "real": {
+        "label_zh": "使用真实机构名称",
+        "label_en": "Use real institution names"
+      },
+      "fictional": {
+        "label_zh": "使用虚构机构名称",
+        "label_en": "Use fictional institution names"
+      },
+      "anonymized": {
+        "label_zh": "使用匿名化机构名称",
+        "label_en": "Use anonymized institution names"
+      }
+    },
+    "default": "real"
+  }
+}
