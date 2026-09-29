@@ -136,17 +136,20 @@ def load_pool_from_json(
         for pdata in participants_list:
             p = Participant(**pdata)
             pool._participants[p.participant_id] = p
-            if p.participant_id.startswith("P_") and p.participant_id != "P_TARGET":
-                try:
-                    num = int(p.participant_id.split("_")[1])
-                    if num >= pool._next_id_counter:
-                        pool._next_id_counter = num + 1
-                except ValueError:
-                    pass
     elif isinstance(participants_list, dict):
         for pid, pdata in participants_list.items():
             p = Participant(**pdata)
             pool._participants[pid] = p
+
+    # Both save() lists and to_json() mappings must resume after existing IDs.
+    for pid in pool._participants:
+        if pid.startswith("P_") and pid != "P_TARGET":
+            try:
+                num = int(pid.split("_")[1])
+                if num >= pool._next_id_counter:
+                    pool._next_id_counter = num + 1
+            except ValueError:
+                pass
 
     logger.info(f"  Pool restored: {pool.count()} participants")
     return pool
